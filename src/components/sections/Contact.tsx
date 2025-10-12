@@ -116,7 +116,7 @@ export const Contact: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.05 }}
           className="space-y-8"
         >
           {/* Section Header */}

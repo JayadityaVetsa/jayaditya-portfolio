@@ -98,13 +98,13 @@ export const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="pt-20 pb-16 bg-gradient-to-br from-cosmic-secondary/10 via-cosmic-primary to-cosmic-dark">
+    <section id="projects" className="pt-12 pb-10 bg-gradient-to-br from-cosmic-secondary/10 via-cosmic-primary to-cosmic-dark">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.05 }}
           className="space-y-12"
         >
           {/* Section Header */}

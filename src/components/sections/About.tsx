@@ -90,14 +90,14 @@ export const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-cosmic-primary via-cosmic-dark to-cosmic-secondary/10">
+    <section id="about" className="py-12 bg-gradient-to-br from-cosmic-primary via-cosmic-dark to-cosmic-secondary/10">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="space-y-20"
+          viewport={{ once: true, amount: 0.05 }}
+          className="space-y-10"
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center">
