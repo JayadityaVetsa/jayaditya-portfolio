@@ -188,7 +188,7 @@ export const About: React.FC = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {values.map((value, index) => (
+              {values.map((value) => (
                 <motion.div
                   key={value.title}
                   className="bg-cosmic-dark/40 backdrop-blur-sm rounded-xl p-6 border border-cosmic-secondary/20 hover:border-cosmic-accent/30 transition-all duration-300"
@@ -224,7 +224,7 @@ export const About: React.FC = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {skills.map((skill, index) => (
+              {skills.map((skill) => (
                 <motion.div
                   key={skill.title}
                   className="group relative bg-cosmic-dark/30 backdrop-blur-sm rounded-xl p-6 border border-cosmic-secondary/20 hover:border-cosmic-accent/30 transition-all duration-300"

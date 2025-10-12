@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Github, Calendar, Star } from 'lucide-react';
+import { X, ExternalLink, Github } from 'lucide-react';
 import type { Project } from '../../data/projects';
 import { Button } from './Button';
 

@@ -132,7 +132,7 @@ export const Contact: React.FC = () => {
 
           {/* Contact Methods */}
           <motion.div variants={itemVariants} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {contactMethods.map((method, index) => (
+            {contactMethods.map((method) => (
               <motion.a
                 key={method.label}
                 href={method.href}
@@ -280,7 +280,7 @@ export const Contact: React.FC = () => {
                 </p>
                 
                 <div className="flex gap-4">
-                  {socialLinks.map((link, index) => (
+                  {socialLinks.map((link) => (
                     <motion.a
                       key={link.label}
                       href={link.href}

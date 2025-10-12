@@ -215,7 +215,7 @@ export const Experience: React.FC = () => {
                   exit="hidden"
                   className="space-y-8"
                 >
-                  {filteredExperiences.map((experience, index) => (
+                  {filteredExperiences.map((experience) => (
                     <motion.div
                       key={experience.id}
                       variants={itemVariants}
