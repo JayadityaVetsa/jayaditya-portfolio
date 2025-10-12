@@ -1,69 +1,167 @@
-# React + TypeScript + Vite
+# Jayaditya Vetsa - Personal Portfolio 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website showcasing my projects, experiences, and achievements in AI/ML, quantitative finance, and software development.
 
-Currently, two official plugins are available:
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://jayaditya-portfolio.vercel.app)
+[![React](https://img.shields.io/badge/React-18.x-blue)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-38B2AC)](https://tailwindcss.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **🎨 Modern Design** - Beautiful, cosmic-themed UI with smooth animations
+- **📱 Fully Responsive** - Optimized for all devices and screen sizes
+- **⚡ Fast Performance** - Built with Vite for lightning-fast development and production builds
+- **🎭 Smooth Animations** - Powered by Framer Motion for engaging user interactions
+- **📊 Dynamic Content** - Showcasing 10+ projects, internships, and achievements
+- **🔗 Interactive Projects** - Detailed project modals with links to live demos and research preprints
+- **📝 Published Research** - Highlights 2 published preprints in IEEE TechRxiv
+- **🎯 Featured Stats** - 20K+ monthly users, 100+ students taught, Top 24 globally in investment competition
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Frontend
+- **Framework**: React 18.x with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Key Libraries
+- `framer-motion` - Advanced animations and transitions
+- `tailwindcss` - Utility-first CSS framework
+- `lucide-react` - Modern icon library
+- `typescript` - Type-safe development
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Project Structure
+
+```
+jayaditya-portfolio/
+├── src/
+│   ├── components/
+│   │   ├── animations/        # Reusable animation components
+│   │   ├── common/            # Common UI components
+│   │   ├── sections/          # Main page sections
+│   │   └── ui/                # UI components (buttons, modals)
+│   ├── data/                  # Data files (projects, experience, personal info)
+│   ├── hooks/                 # Custom React hooks
+│   ├── utils/                 # Utility functions
+│   ├── App.tsx               # Main application component
+│   ├── index.css             # Global styles
+│   └── main.tsx              # Application entry point
+├── public/                    # Static assets
+└── index.html                # HTML template
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
+- Node.js 18.x or higher
+- npm or yarn
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/JayadityaVetsa/jayaditya-portfolio.git
+   cd jayaditya-portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
 ```
+
+The optimized build will be in the `dist/` directory.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 🎯 Key Highlights
+
+### Projects
+- **LISDSurvey** - iOS app saving $10k+/yr for Leander ISD, serving 30,000+ potential students
+- **FinancialToolsAI** - Platform with 20,000+ monthly users for financial literacy
+- **QuantifyIQ** - Portfolio optimization using Black-Litterman model and Modern Portfolio Theory
+- **NOVA** - AI-driven neuroimaging achieving 96.08% accuracy in disease detection
+- **LSTM Stock Prediction** - Research on sentiment source credibility in forecasting
+
+### Internships
+- **Calimatic EdTech** - Machine Learning Intern (1000+ successful executions, 70% efficiency improvement)
+- **IQ-Consulting** - ML & Software Intern (10+ automated workflows, 1000+ documents indexed)
+
+### Achievements
+- Top 24/650+ globally at Global Youth Investment Summit
+- 2nd place nationally in DECA Virtual Business Challenge
+- 2 published preprints in IEEE TechRxiv
+- Science Olympiad State Qualifier, led 150+ members
+- Taught 100+ students, raised $4,000+ for scholarships
+
+## 📝 Customization
+
+To customize the portfolio with your own information:
+
+1. **Personal Information**: Edit `src/data/personal.ts`
+2. **Projects**: Update `src/data/projects.ts`
+3. **Experience**: Modify `src/data/experience.ts`
+4. **Styling**: Adjust colors and themes in `tailwind.config.js`
+
+## 🌐 Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Connect your repository to [Vercel](https://vercel.com)
+3. Vercel will auto-detect Vite and deploy automatically
+4. Your site will be live at `https://your-project.vercel.app`
+
+### Other Platforms
+
+This project can also be deployed on:
+- Netlify
+- GitHub Pages
+- AWS Amplify
+- Any static hosting service
+
+## 📧 Contact
+
+**Jayaditya Vetsa**
+- Email: vetsajayaditya@gmail.com
+- LinkedIn: [linkedin.com/in/jayaditya-vetsa-21b20b285](https://www.linkedin.com/in/jayaditya-vetsa-21b20b285)
+- GitHub: [@JayadityaVetsa](https://github.com/JayadityaVetsa)
+- Portfolio: [FinancialToolsAI](https://financetoolsai.pythonanywhere.com)
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- Built with [React](https://reactjs.org/) and [Vite](https://vitejs.dev/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Animated with [Framer Motion](https://www.framer.com/motion/)
+- Icons from [Lucide](https://lucide.dev/)
+- Developed using [Cursor AI](https://cursor.sh/)
+
+---
+
+⭐ If you found this portfolio helpful or inspiring, please consider giving it a star!
+
+**Made with ❤️ by Jayaditya Vetsa**
