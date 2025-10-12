@@ -2,10 +2,6 @@
 
 A modern, responsive personal portfolio website showcasing my projects, experiences, and achievements in AI/ML, quantitative finance, and software development.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://jayaditya-portfolio.vercel.app)
-[![React](https://img.shields.io/badge/React-18.x-blue)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-38B2AC)](https://tailwindcss.com/)
 
 ## ✨ Features
 
@@ -53,46 +49,6 @@ jayaditya-portfolio/
 └── index.html                # HTML template
 ```
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18.x or higher
-- npm or yarn
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/JayadityaVetsa/jayaditya-portfolio.git
-   cd jayaditya-portfolio
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:5173`
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-The optimized build will be in the `dist/` directory.
-
-### Preview Production Build
-
-```bash
-npm run preview
-```
 
 ## 🎯 Key Highlights
 
@@ -123,23 +79,6 @@ To customize the portfolio with your own information:
 3. **Experience**: Modify `src/data/experience.ts`
 4. **Styling**: Adjust colors and themes in `tailwind.config.js`
 
-## 🌐 Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Connect your repository to [Vercel](https://vercel.com)
-3. Vercel will auto-detect Vite and deploy automatically
-4. Your site will be live at `https://your-project.vercel.app`
-
-### Other Platforms
-
-This project can also be deployed on:
-- Netlify
-- GitHub Pages
-- AWS Amplify
-- Any static hosting service
-
 ## 📧 Contact
 
 **Jayaditya Vetsa**
@@ -147,20 +86,6 @@ This project can also be deployed on:
 - LinkedIn: [linkedin.com/in/jayaditya-vetsa-21b20b285](https://www.linkedin.com/in/jayaditya-vetsa-21b20b285)
 - GitHub: [@JayadityaVetsa](https://github.com/JayadityaVetsa)
 - Portfolio: [FinancialToolsAI](https://financetoolsai.pythonanywhere.com)
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- Built with [React](https://reactjs.org/) and [Vite](https://vitejs.dev/)
-- Styled with [Tailwind CSS](https://tailwindcss.com/)
-- Animated with [Framer Motion](https://www.framer.com/motion/)
-- Icons from [Lucide](https://lucide.dev/)
-- Developed using [Cursor AI](https://cursor.sh/)
-
----
 
 ⭐ If you found this portfolio helpful or inspiring, please consider giving it a star!
 
