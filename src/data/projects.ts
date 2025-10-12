@@ -1,0 +1,196 @@
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  longDescription: string;
+  technologies: string[];
+  category: string;
+  imageUrl: string;
+  demoUrl?: string;
+  demoLabel?: string; // Custom label for the demo/website/preprint button
+  githubUrl?: string;
+  impact: string;
+  status: 'completed' | 'in-progress' | 'published';
+  featured: boolean;
+}
+
+export const projects: Project[] = [
+  {
+    id: 'lisd-survey-app',
+    title: 'LISDSurvey - Leander ISD Survey App',
+    description: 'iOS survey app replacing $10k+/yr third-party tools, serving 30,000+ potential users',
+    longDescription: 'Co-founded and built an iOS survey app to replace expensive third-party tools like Google Forms, saving Leander ISD significant costs. Currently in beta testing with RHS administrators and district officials, with potential to serve 30,000+ students across LISD. Designed smooth UI/UX with real-time feedback features to boost student participation and amplify student voices. Developed backend systems using Swift, Firebase, and REST APIs to securely collect, store, and visualize survey data for administrators.',
+    technologies: ['Swift', 'Firebase', 'REST APIs', 'iOS Development', 'UI/UX Design', 'Data Visualization'],
+    category: 'Education',
+    imageUrl: '/images/lisd-survey.jpg',
+    demoUrl: 'https://apps.apple.com/us/app/lisdsurvey/id6752630095',
+    demoLabel: 'Download on App Store',
+    githubUrl: 'https://github.com/JayadityaVetsa',
+    impact: 'Potential 30,000+ student users, Saving $10k+/yr for the district, In beta with LISD officials',
+    status: 'in-progress',
+    featured: true,
+  },
+  {
+    id: 'financial-tools-ai',
+    title: 'FinancialToolsAI',
+    description: 'AI-powered financial analysis platform with 20,000+ monthly visits',
+    longDescription: 'Co-founded and developed a comprehensive AI-powered financial analysis platform that has attracted over 20,000 visits monthly. Built free finance website offering stock analysis, company summaries, and investment simulations (DCF, Monte Carlo, AI Q&A). Improved financial literacy for 50+ teens, helping beginners make smarter money decisions through simple, accessible online tools. Featured in the Young Investor Society Newsletter (12,000+ students reached) for 2 months as a highlighted resource.',
+    technologies: ['Python', 'Flask', 'Gemini API', 'MatPlotLib', 'Pandas', 'HTML/CSS/Bootstrap', 'Financial APIs'],
+    category: 'FinTech',
+    imageUrl: '/images/financial-tools-ai.jpg',
+    demoUrl: 'https://financetoolsai.pythonanywhere.com',
+    githubUrl: 'https://github.com/JayadityaVetsa',
+    impact: 'Serves 20,000+ monthly users, Featured in YIS Newsletter (12,000+ students)',
+    status: 'completed',
+    featured: true,
+  },
+  {
+    id: 'quantifyiq',
+    title: 'QuantifyIQ',
+    description: 'Advanced portfolio optimization platform using Modern Portfolio Theory and complex algorithms',
+    longDescription: 'Co-founded and developed a sophisticated portfolio optimization platform for advanced investors that applies Modern Portfolio Theory to help users balance risk and return. Integrated the Black-Litterman model—a complex algorithm combining market equilibrium with investor views—to allow users to adjust portfolios based on their own market perspectives, enhancing personalization. Built advanced tools for Monte Carlo simulations to forecast potential investment outcomes and stress testing to evaluate portfolio resilience during historical financial crises.',
+    technologies: ['Python', 'Modern Portfolio Theory', 'Black-Litterman Model', 'Monte Carlo Simulation', 'Financial Modeling', 'Advanced Algorithms'],
+    category: 'FinTech',
+    imageUrl: '/images/quantifyiq.jpg',
+    demoUrl: 'https://quant-iq-vision-frontend.onrender.com/',
+    githubUrl: 'https://github.com/JayadityaVetsa',
+    impact: 'Advanced quantitative tools, Black-Litterman algorithm implementation, Stress testing capabilities',
+    status: 'completed',
+    featured: true,
+  },
+  {
+    id: 'calimatic-chatbot',
+    title: 'Calimatic EdTech AI Chatbot',
+    description: 'Enterprise chatbot with 1000+ successful executions',
+    longDescription: 'Built a working chatbot during my machine learning internship at Calimatic EdTech with 1000+ successful executions, using Python and APIs. Optimized the company knowledge base through data analysis and database management, improving efficiency by 70%. Leveraged advanced tools like OpenAI API, LangChain, Azure, LlamaIndex to design scalable AI solutions. Built 5+ automated workflows in n8n, streamlining lead management, task tracking, website development, and SEO processes.',
+    technologies: ['Python', 'OpenAI API', 'LangChain', 'Azure', 'LlamaIndex', 'Database Management', 'n8n'],
+    category: 'AI/ML',
+    imageUrl: '/images/calimatic-chatbot.jpg',
+    demoUrl: 'https://www.calimaticedtech.com/',
+    demoLabel: 'Visit Website',
+    impact: '1000+ successful executions, 70% efficiency improvement, 5+ automated workflows',
+    status: 'completed',
+    featured: true,
+  },
+  {
+    id: 'iq-consulting-internship',
+    title: 'IQ-Consulting (IQC-IT) - ML & Software Intern',
+    description: 'Automated 10+ internal workflows, improving team efficiency and document navigation',
+    longDescription: 'ML & Software Intern at IQ-Consulting where I automated 10+ internal workflows with n8n, reducing repetitive tasks and saving the team ~5 hrs/week. Built dashboards and structured 200+ records of historical engagement data, improving accessibility for recruiting and project planning. Prototyped search integrations with Azure Cognitive Search, LangChain, and LLaMA, enabling faster navigation of 1,000+ internal documents and notes. Contributed to technical documentation and team code reviews, emphasizing lightweight, maintainable solutions.',
+    technologies: ['n8n', 'Azure Cognitive Search', 'LangChain', 'LLaMA', 'Python', 'Dashboard Development', 'Workflow Automation'],
+    category: 'AI/ML',
+    imageUrl: '/images/iq-consulting.jpg',
+    demoUrl: 'https://iqc-it.com/',
+    demoLabel: 'Visit Website',
+    impact: '10+ automated workflows, Saving ~5 hrs/week, 1,000+ documents indexed',
+    status: 'completed',
+    featured: true,
+  },
+  {
+    id: 'nova-neuroimaging',
+    title: 'NOVA: Neurodegenerative Disease Detection AI',
+    description: 'AI-driven gray matter segmentation achieving 96.08% accuracy in disease detection',
+    longDescription: 'Developed an AI-driven gray matter segmentation model to detect and visualize neurodegenerative disease progression using MRI/fMRI scans, focusing on early-stage Parkinson\'s and paralysis indicators. Achieved 96.08% accuracy in identifying neurodegenerative disease through a novel implementation of CNN on 2D MRI. Selected for Round 2 Judging at the Greater Austin Regional Science and Engineering Fair (GARSEF) for innovative methodology and clinical potential. Published preprint titled "NOVA: A Deep Learning-Based Tool for Early Detection and Biomarker Inference of Neurodegenerative Diseases Using 2D MRI" in TechRxiv (IEEE preprint server).',
+    technologies: ['Python', 'Deep Learning', 'Medical Imaging', 'MRI/fMRI', 'CNNs', 'TensorFlow', '2D Image Analysis'],
+    category: 'AI/ML',
+    imageUrl: '/images/nova-neuroimaging.jpg',
+    demoUrl: 'https://www.techrxiv.org/users/935305/articles/1305840-nova-a-deep-learning-based-tool-for-early-detection-and-biomarker-inference-of-neurodegenerative-diseases-using-2d-mri',
+    demoLabel: 'Research Preprint',
+    impact: '96.08% accuracy, GARSEF Round 2, Published in IEEE TechRxiv',
+    status: 'completed',
+    featured: true,
+  },
+  {
+    id: 'lstm-stock-prediction',
+    title: 'LSTM Stock Price Prediction Research',
+    description: 'Independent research on sentiment source credibility in stock price forecasting',
+    longDescription: 'Conducted independent research on the role of sentiment source credibility in forecasting stock prices using LSTM neural networks. Built a custom Python-based prediction pipeline combining VADER sentiment analysis, stock data from Yahoo Finance, and multiple news/sentiment sources (real, Reddit, and AI-generated). Demonstrated that the credibility of sentiment sources significantly impacts model accuracy, with Reddit and fake news introducing measurable volatility into predictions. Published findings on TechRxiv (IEEE preprint server).',
+    technologies: ['Python', 'LSTM', 'VADER Sentiment Analysis', 'Yahoo Finance API', 'Neural Networks', 'Time Series Analysis'],
+    category: 'AI/ML',
+    imageUrl: '/images/lstm-research.jpg',
+    demoUrl: 'https://www.techrxiv.org/users/935305/articles/1311773-the-impact-of-sentiment-source-credibility-on-lstm-based-stock-price-prediction',
+    demoLabel: 'Research Preprint',
+    impact: 'Published in IEEE TechRxiv, Novel sentiment credibility analysis',
+    status: 'completed',
+    featured: true,
+  },
+  {
+    id: 'arista-networks-research',
+    title: 'Arista Networks Equity Research - YIS Global Finalist',
+    description: 'Top 24 globally in Young Investors Society competition from 650+ teams',
+    longDescription: 'First RHS team to reach Top 24 out of 650+ teams globally at the Global Youth Investment Summit in New York. Conducted 100+ hours of equity research on Arista Networks, producing a professional stock pitch report. Built a robust 10-year Discounted Cash Flow (DCF) model with detailed revenue projections, WACC calculation, terminal value sensitivity testing, and scenario analysis across bull, base, and bear cases. Pitched investment thesis to NYC hedge fund managers and industry judges, receiving recognition for depth of analysis.',
+    technologies: ['Financial Modeling', 'DCF Analysis', 'Excel', 'Investment Research', 'WACC Calculation', 'Scenario Analysis'],
+    category: 'FinTech',
+    imageUrl: '/images/arista-networks-research.jpg',
+    impact: 'Top 24 of 650+ teams globally, First RHS team to reach finals, Pitched to NYC hedge fund managers',
+    status: 'completed',
+    featured: true,
+  },
+  {
+    id: 'nsf-teaching-platform',
+    title: 'North South Foundation Volunteer',
+    description: 'Teaching 100+ students with curriculum development, raised $4000+ for scholarships',
+    longDescription: 'Tutored 100+ students in advanced math, helping them improve academically and prepare for national competitions through North South Foundation. Designed 3 curricula and teaching materials tailored to elementary students\' learning needs. Organized and judged local spelling and math competitions, supporting hands-on student engagement. Raised $4,000+ through local tutorials, funding scholarships for low-income students in India.',
+    technologies: ['Educational Technology', 'Curriculum Development', 'Teaching Methods', 'Competition Management'],
+    category: 'Education',
+    imageUrl: '/images/nsf-teaching.jpg',
+    demoUrl: 'https://www.northsouth.org/',
+    demoLabel: 'Visit Website',
+    impact: 'Taught 100+ students, Raised $4,000+ for scholarships, 3 curricula designed',
+    status: 'completed',
+    featured: false,
+  },
+  {
+    id: 'deca-business-challenge',
+    title: 'DECA National Competition',
+    description: '2nd place nationally in Virtual Business Challenge, 2x ICDC qualifier',
+    longDescription: '2× International Career Development Conference (ICDC) qualifier with team placing 1st at ICDC. Achieved 2nd place nationally in both Round 1 & Round 2 of DECA\'s Virtual Business Challenge (Fashion) by Knowledge Matters. Ranked in Top 40% of 16,000+ Texas DECA members and top 10% of all competitors in the Stock Market Game. Developed DECA-Prep-AI website that improved test prep for 125+ members, boosting statewide DECA performance and competition readiness through AI-powered practice materials.',
+    technologies: ['Business Strategy', 'Fashion Industry Analysis', 'Entrepreneurship', 'Presentation Skills', 'Web Development', 'AI Integration'],
+    category: 'Business',
+    imageUrl: '/images/deca-challenge.jpg',
+    demoUrl: 'https://deca-prep-ai.vercel.app/',
+    demoLabel: 'Visit Website',
+    impact: 'Developed DECA-Prep-AI website serving 125+ members, 2nd place nationally (both rounds), Team won 1st at ICDC',
+    status: 'completed',
+    featured: false,
+  },
+  {
+    id: 'science-olympiad',
+    title: 'Science Olympiad Leadership',
+    description: 'Co-Founder and Vice President, grew club to 150+ members, State Qualifier',
+    longDescription: 'Co-founded and grew Science Olympiad club to 150+ members, raising $6,000+ and working with the team for 4 years. Advanced from UT Regionals to Texas State (Top 4 school); personally placed 6th in Cell Biology out of 20+ teams. Led the club for 3 years as Vice President by managing attendance, organizing club reports, helping form teams, assigning events, and maintaining financial records. Earned multiple Top 10 event placements, mentoring members and strengthening the club\'s competitive standing.',
+    technologies: ['Leadership', 'Team Management', 'Scientific Research', 'Biology', 'Competition Strategy', 'Fundraising'],
+    category: 'Leadership',
+    imageUrl: '/images/science-olympiad.jpg',
+    impact: 'State qualifier, Led 150+ members, Raised $6,000+, 6th place Cell Biology, Multiple Top 10 placements',
+    status: 'completed',
+    featured: false,
+  },
+  {
+    id: 'portfolio-website',
+    title: 'Personal Portfolio Website',
+    description: 'Modern responsive portfolio built with React and AI tools',
+    longDescription: 'Designed and developed a modern, responsive portfolio website showcasing my projects and achievements. Built using React, TypeScript, Tailwind CSS, and Framer Motion for smooth animations. Leveraged AI development tools like Cursor for accelerated development workflow. Features include interactive project cards, smooth animations, and mobile-responsive design.',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Cursor AI', 'Web Development'],
+    category: 'AI/ML',
+    imageUrl: '/images/portfolio.jpg',
+    githubUrl: 'https://github.com/JayadityaVetsa',
+    impact: 'Showcases technical skills, Built with modern AI development tools',
+    status: 'in-progress',
+    featured: false,
+  },
+];
+
+export const projectCategories = [
+  'All',
+  'AI/ML',
+  'FinTech',
+  'Education',
+  'Business',
+  'Leadership',
+];
+
+export const getFeaturedProjects = () => projects.filter(project => project.featured);
+export const getProjectsByCategory = (category: string) => 
+  category === 'All' ? projects : projects.filter(project => project.category === category);
+export const getProjectById = (id: string) => projects.find(project => project.id === id); 
