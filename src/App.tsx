@@ -33,7 +33,7 @@ const HeroCanvas = lazy(() =>
 );
 
 const navItems = [
-  { id: 'work', label: 'Work' },
+  { id: 'work', label: 'Projects' },
   { id: 'research', label: 'Research' },
   { id: 'experience', label: 'Experience' },
   { id: 'stack', label: 'Stack' },
@@ -181,7 +181,7 @@ function Section({
       id={id}
       className="section"
       variants={stagger}
-      initial="hidden"
+      initial="visible"
       whileInView="visible"
       viewport={{ once: true, amount: 0.18 }}
     >
@@ -282,6 +282,13 @@ function CompactProjectCard({ project }: { project: CompactProject }) {
           <TechPill key={tech}>{tech}</TechPill>
         ))}
       </div>
+      {project.links.length > 0 && (
+        <div className="link-row">
+          {project.links.map((link) => (
+            <ExternalLinkButton key={link.href} href={link.href} label={link.label} tone="ghost" />
+          ))}
+        </div>
+      )}
     </motion.article>
   );
 }
@@ -411,9 +418,9 @@ function App() {
 
         <Section
           id="work"
-          eyebrow="Selected work"
-          title="Products and technical systems with proof."
-          summary="A curated set of projects that show product thinking, backend depth, ML implementation, and measurable user impact."
+          eyebrow="Projects"
+          title="Products, research systems, and open-source builds."
+          summary="A focused view of shipped products and research work, followed by the full GitHub project catalog with implementation details."
         >
           <div className="case-grid">
             {featuredProjects.map((project, index) => (
@@ -421,11 +428,11 @@ function App() {
             ))}
           </div>
           <motion.div className="subsection-heading" variants={reveal}>
-            <p className="eyebrow">Current summer builds</p>
-            <h3>More projects in active development.</h3>
+            <p className="eyebrow">GitHub project catalog</p>
+            <h3>Open-source work and research builds.</h3>
             <p>
-              These are newer projects that strengthen the technical picture without needing full case-study treatment
-              yet.
+              Each entry is linked directly to its repository and summarizes the real implementation, validation, and
+              technical focus described in its README.
             </p>
           </motion.div>
           <div className="compact-project-grid">

@@ -55,6 +55,7 @@ export type CompactProject = {
   status: string;
   technologies: string[];
   proof: string[];
+  links: LinkItem[];
 };
 
 export const profile = {
@@ -225,56 +226,142 @@ export const additionalProjects: CompactProject[] = [
     category: 'Developer tooling',
     role: 'Founder and Maintainer',
     summary:
-      'Security-focused developer tool for validating dependency patches and helping teams reason about vulnerable package updates.',
-    status: 'Published to npm',
+      'Deterministic CLI and GitHub Action that proves a changed regression test fails on a base revision and passes on the submitted fix.',
+    status: 'npm package and GitHub Action',
     technologies: ['TypeScript', 'Node.js', 'npm', 'GitHub', 'Security Automation'],
     proof: [
-      'Packaged and published as an npm release.',
-      'Built around practical patch verification and dependency-risk workflows.',
-      'Designed as a reusable tool rather than a one-off script.',
+      'Supports pytest, Jest, and Vitest across Linux, Windows, and macOS.',
+      'Uses isolated Git worktrees and separate base/head environments for reproducible checks.',
+      'Reports whether a changed test actually distinguishes a patch from its base revision.',
     ],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/JayadityaVetsa/PatchProof' },
+      { label: 'Documentation', href: 'https://jayadityavetsa.github.io/PatchProof/' },
+      { label: 'npm', href: 'https://www.npmjs.com/package/@jayadityavetsa/patchproof' },
+    ],
+  },
+  {
+    title: 'AVA Action Recognition',
+    category: 'Computer vision research',
+    role: 'Researcher and Builder',
+    summary:
+      'Benchmarked single-frame CNNs on a curated 15-class AVA v2.2 action-recognition subset to measure the limits of spatial-only vision.',
+    status: 'Research benchmark',
+    technologies: ['Python', 'PyTorch', 'EfficientNet-B2', 'CNNs', 'AVA v2.2'],
+    proof: [
+      'Compared a 3.2M-parameter custom CNN with an 8.4M-parameter fine-tuned EfficientNet-B2.',
+      'Fine-tuned EfficientNet-B2 reached 22.58% validation accuracy and 12.99% mAP.',
+      'Analyzed why temporal context is essential for motion-dependent actions such as reading, drinking, and smoking.',
+    ],
+    links: [{ label: 'GitHub', href: 'https://github.com/JayadityaVetsa/AvaActionRecognition' }],
+  },
+  {
+    title: 'Cross-Sectional Statistical Arbitrage',
+    category: 'Quantitative research',
+    role: 'Independent Builder',
+    summary:
+      'Market-neutral residual mean-reversion research platform for liquid U.S. equities, with factor neutralization and cost-aware backtesting.',
+    status: 'Research dashboard',
+    technologies: ['Python', 'Streamlit', 'Pandas', 'Backtesting', 'Statistical Arbitrage'],
+    proof: [
+      'Ranks residual mean-reversion signals after modeling returns against SPY-derived market factors.',
+      'Includes transaction costs, slippage, validation utilities, tests, and a beginner-friendly Streamlit dashboard.',
+      'Cached June 2026 research run reported a 0.97 full-period Sharpe ratio; historical simulation only, not investment advice.',
+    ],
+    links: [{ label: 'GitHub', href: 'https://github.com/JayadityaVetsa/cross-sectional-statistical-arbitrage' }],
   },
   {
     title: 'Queue-Reactive Limit Order Book Simulator',
     category: 'Quant finance',
     role: 'Independent Builder',
     summary:
-      'Market microstructure simulator exploring queue-reactive limit order book dynamics, order flow, and price formation.',
-    status: 'Summer quant project',
+      'Research-grade simulator and Streamlit dashboard for state-dependent limit-order-book dynamics, calibration, and execution research.',
+    status: 'Market microstructure simulator',
     technologies: ['Python', 'Market Microstructure', 'Simulation', 'Limit Order Books', 'Data Modeling'],
     proof: [
-      'Models order book behavior at a more granular level than simple price-series analysis.',
-      'Connects quantitative finance research ideas to executable simulation code.',
-      'Complements QuantifyIQ by focusing on market mechanics instead of portfolio construction.',
+      'Models limit, market, and cancel events with queue-reactive arrival intensities.',
+      'Includes calibration, deterministic simulation, empirical validation, and an interactive research guide.',
+      'Verified 11/11 tests and benchmarked over 107,000 simulated events per second locally.',
     ],
+    links: [{ label: 'GitHub', href: 'https://github.com/JayadityaVetsa/queue-reactive-limit-order-book-market-simulator' }],
+  },
+  {
+    title: 'Gridwatch AI',
+    category: 'Applied machine learning',
+    role: 'Builder',
+    summary:
+      'Real-time U.S. power-grid risk monitoring dashboard that predicts and visualizes potential cascade failures with a 72-hour outlook.',
+    status: 'ML monitoring dashboard',
+    technologies: ['React', 'TypeScript', 'Vite', 'Gradient Boosting', 'EIA', 'NOAA'],
+    proof: [
+      'Processes grid-load anomalies and climate features in a live monitoring workflow.',
+      'Uses a GradientBoostingRegressor trained on historically backtested EIA and NOAA data.',
+      'Designed as a Vite application ready for Vercel deployment.',
+    ],
+    links: [{ label: 'GitHub', href: 'https://github.com/JayadityaVetsa/Gridwatch-AI' }],
+  },
+  {
+    title: 'Quant IQ Vision',
+    category: 'Portfolio optimization',
+    role: 'Co-Founder and Lead Backend Developer',
+    summary:
+      'Full-stack portfolio analysis and optimization application with a React interface and FastAPI service layer.',
+    status: 'Live application',
+    technologies: ['React', 'TypeScript', 'FastAPI', 'Python', 'Tailwind CSS'],
+    proof: [
+      'Provides portfolio analysis, risk metrics, market data, and efficient-frontier visualization.',
+      'Uses a documented REST API for portfolio analysis and market-data workflows.',
+      'Pairs frontend product work with a Python backend built for data validation and API delivery.',
+    ],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/JayadityaVetsa/quant-iq-vision-08' },
+      { label: 'Live Site', href: 'https://quant-iq-vision-frontend.onrender.com/' },
+    ],
+  },
+  {
+    title: 'AppSpark',
+    category: 'Education technology',
+    role: 'Builder',
+    summary:
+      'Web application that helps young technologists discover viable app ideas and follow personalized learning challenges to build them.',
+    status: 'AI learning platform',
+    technologies: ['React', 'TypeScript', 'Firebase', 'Gemini API', 'Tailwind CSS'],
+    proof: [
+      'Combines curated ideas with Gemini-powered customization based on user interests and skills.',
+      'Validates concepts against a users skill level and available time.',
+      'Includes personalized learning pathways, community features, and progress tracking.',
+    ],
+    links: [{ label: 'GitHub', href: 'https://github.com/JayadityaVetsa/SparkApp' }],
+  },
+  {
+    title: 'Robot PoseShield (SphereShield)',
+    category: 'Robotics and safety',
+    role: 'Independent Builder',
+    summary:
+      'CPU-based collision checking and motion repair for the Franka Panda, using deterministic sphere geometry and differentiable URDF kinematics.',
+    status: 'Robotics research implementation',
+    technologies: ['Python', 'PyTorch', 'PyBullet', 'URDF Kinematics', 'Motion Planning'],
+    proof: [
+      'Uses 61 official Panda collision spheres and validates geometry independently against PyBullet.',
+      'Achieved 94.28% holdout accuracy with zero observed false-safe classifications across 2,479 collision cases.',
+      'Repaired two colliding trajectories to zero collisions across 301 dense PyBullet checks each.',
+    ],
+    links: [{ label: 'GitHub', href: 'https://github.com/JayadityaVetsa/Robot-PoseShield' }],
   },
   {
     title: 'AIGP',
     category: 'Applied AI',
     role: 'Summer Builder',
     summary:
-      'AI project focused on turning complex reasoning workflows into a more structured, testable product experience.',
+      'AI product work focused on turning complex reasoning workflows into a structured, testable user experience.',
     status: 'In development',
     technologies: ['AI Systems', 'TypeScript', 'Product Design', 'Evaluation', 'Workflow Automation'],
     proof: [
-      'Built as part of a summer push into more serious AI product engineering.',
+      'Built as part of a summer push into more rigorous AI product engineering.',
       'Explores structured generation, evaluation, and user-facing workflow design.',
-      'Kept on the site as current work without overstating launch metrics.',
+      'Included as active work without overstating launch metrics before release.',
     ],
-  },
-  {
-    title: 'Robot PoseShield',
-    category: 'Robotics and safety',
-    role: 'Independent Builder',
-    summary:
-      'Robotics project for validating robot pose behavior and detecting unsafe or unexpected state changes.',
-    status: 'Summer robotics project',
-    technologies: ['Robotics', 'Pose Estimation', 'Python', 'Computer Vision', 'Safety Systems'],
-    proof: [
-      'Connects software validation ideas with robotics control and perception.',
-      'Builds on prior robotics experience with PID control and competition debugging.',
-      'Designed around safety, reliability, and pose-aware system checks.',
-    ],
+    links: [],
   },
 ];
 
