@@ -74,7 +74,7 @@ export const Experience: React.FC = () => {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-4">
-              {getFeaturedExperiences().slice(0, 4).map((experience, index) => (
+              {getFeaturedExperiences().slice(0, 4).map((experience) => (
                 <div
                   key={experience.id}
                   className="bg-cosmic-dark/40 rounded-lg p-3 border border-cosmic-secondary/20 hover:border-cosmic-accent/30 transition-colors duration-200"
@@ -157,7 +157,7 @@ export const Experience: React.FC = () => {
                 <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cosmic-accent via-cosmic-secondary to-cosmic-accent opacity-30" />
 
                 <div className="space-y-4">
-                  {filteredExperiences.map((experience, index) => (
+                  {filteredExperiences.map((experience) => (
                   <div
                     key={`${experience.id}-${selectedType}`}
                     className="relative flex items-start gap-3"
@@ -245,7 +245,7 @@ export const Experience: React.FC = () => {
                   { label: 'Students', value: '100+', desc: 'Taught & Mentored' },
                   { label: 'Team Members', value: '50+', desc: 'Led & Supervised' },
                   { label: 'Competitions', value: '5+', desc: 'Top Placements' },
-                ].map((stat, index) => (
+                ].map((stat) => (
                   <div
                     key={stat.label}
                     className="text-center p-3 bg-cosmic-dark/40 rounded-lg border border-cosmic-secondary/20 hover:border-cosmic-accent/20 transition-colors duration-200"

@@ -2,7 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ExternalLink, Github, Calendar, MapPin, Users, TrendingUp } from 'lucide-react';
 import { projects } from '../../data/projects';
+import type { Project } from '../../data/projects';
 import { experiences } from '../../data/experience';
+import type { Experience } from '../../data/experience';
 
 interface CarouselItem {
   id: string;
@@ -12,7 +14,7 @@ interface CarouselItem {
   impact: string;
   technologies: string[];
   type: 'project' | 'experience';
-  data: any;
+  data: Project | Experience;
 }
 
 interface RotatingCarouselProps {
@@ -303,7 +305,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ item, isActive }) => {
           <div className="text-xs text-cosmic-muted">
             {item.category}
           </div>
-          {item.type === 'project' && item.data.demoUrl && (
+          {item.type === 'project' && 'demoUrl' in item.data && item.data.demoUrl && (
             <motion.a
               href={item.data.demoUrl}
               target="_blank"

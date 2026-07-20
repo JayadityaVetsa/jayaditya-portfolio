@@ -239,6 +239,55 @@ export const experiences: Experience[] = [
     totalWeeks: 20,
     featured: true,
   },
+  {
+    id: 'rhs-nths',
+    title: 'Technical Director',
+    company: 'RHS National Technical Honor Society',
+    period: '2023 - Present',
+    type: 'leadership',
+    description: 'Led chapter growth to 70+ members with automated selection and technical workshops',
+    responsibilities: [
+      'Inducted 70+ members, driving 90% year-over-year growth in chapter size',
+      'Analyzed 1,000+ candidate applications and built automated sorting algorithms to streamline selection',
+      'Organized and prototyped professional webinars/events, expanding members\' exposure to technical careers',
+      'Taught 50+ peers advanced algorithms and project development strategies through weekly workshops'
+    ],
+    achievements: [
+      '90% year-over-year chapter growth',
+      '1,000+ applications processed with automation',
+      '50+ peers taught advanced algorithms',
+      'Professional webinars and events organized'
+    ],
+    technologies: ['Automation', 'Algorithms', 'Event Planning', 'Leadership'],
+    location: 'Leander, TX',
+    hoursPerWeek: 2,
+    totalWeeks: 25,
+    featured: false,
+  },
+  {
+    id: 'rhs-first-robotics',
+    title: 'Software Member',
+    company: 'RHS FIRST Robotics Challenge 7064',
+    period: '2022 - 2023',
+    type: 'leadership',
+    description: 'Implemented PID controllers and Java-based robot programming for competition',
+    responsibilities: [
+      'Implemented proper Proportional-Integral-Derivative (PID) controller to improve driving quality of new robots',
+      'Programmed robot functions using Java and robotics libraries',
+      'Worked with engineers and designers to integrate and test software on the robot',
+      'Debugged code under competition conditions to keep robots running smoothly'
+    ],
+    achievements: [
+      'Improved robot driving quality with PID control',
+      'Successful competition software integration',
+      'Cross-functional collaboration with engineering team'
+    ],
+    technologies: ['Java', 'PID Control', 'Robotics', 'Debugging'],
+    location: 'Leander, TX',
+    hoursPerWeek: 4,
+    totalWeeks: 25,
+    featured: false,
+  },
 ];
 
 export const experienceTypes = [

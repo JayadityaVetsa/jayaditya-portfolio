@@ -267,7 +267,7 @@ export const Projects: React.FC = () => {
               </div>
 
               <div className="grid lg:grid-cols-2 gap-8">
-                {getFeaturedProjects().slice(0, 2).map((project, index) => (
+                {getFeaturedProjects().slice(0, 2).map((project) => (
                   <motion.div
                     key={project.id}
                     className="bg-cosmic-dark/30 backdrop-blur-sm rounded-2xl p-8 border border-cosmic-secondary/20 hover:border-cosmic-accent/30 transition-all duration-300 cursor-pointer"
