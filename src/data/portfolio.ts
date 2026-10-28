@@ -39,8 +39,8 @@ export const selectedProjects: Project[] = [
     title: 'SplineFlow-Panda',
     category: 'Robotics research',
     year: '2026',
-    summary: 'A measured MuJoCo study comparing continuous B-spline robot actions with discrete action chunks for a simulated Franka Panda.',
-    impact: 'At 2× speed, B-spline actions completed both paired layouts while discrete chunks missed the waypoint criterion; the work includes a live dashboard and reproducible rollout ledger.',
+    summary: 'A controlled MuJoCo benchmark comparing 10 Hz action chunks and continuous B-spline trajectories with a shared 100 Hz controller across eight rollouts.',
+    impact: 'B-splines completed 2/2 paired 2×-speed trials in 5.00 seconds while action chunks failed the 2 cm waypoint criterion. Analyzed tracking error, jerk, contacts, and actuator saturation.',
     technologies: ['Python', 'MuJoCo', 'B-splines', 'Robotics', 'Streamlit'],
     links: [
       { label: 'Repository', href: 'https://github.com/JayadityaVetsa/SplineFlow-Panda' },
@@ -52,7 +52,7 @@ export const selectedProjects: Project[] = [
     category: 'Autonomous systems',
     year: '2026',
     summary: 'A drone autonomy stack connecting camera-based PnP sensing with Kalman-filtered IMU data for onboard state estimation.',
-    impact: 'Integrated MAVLink control modes for detection, alignment, and navigation, with telemetry and recovery logic for signal dropout, localization failures, and collisions.',
+    impact: 'Built UDP camera ingestion and MAVLink control modes for detection, alignment, and navigation, with telemetry and recovery logic for signal dropout, localization failures, and collisions.',
     technologies: ['Python', 'OpenCV', 'MAVLink', 'Sensor Fusion', 'Kalman Filtering'],
     links: [{ label: 'Repository', href: 'https://github.com/JayadityaVetsa/AiGP-drone-comp' }],
   },
@@ -72,9 +72,9 @@ export const selectedProjects: Project[] = [
     title: 'Robot SphereShield',
     category: 'Robot safety',
     year: '2026',
-    summary: 'CPU-based collision checking and motion repair for the Franka Panda, combining deterministic sphere geometry with differentiable URDF kinematics.',
-    impact: '94.28% accuracy on a 20,000-pose holdout, with zero false-safe predictions across 2,479 collisions. Repaired two trajectories to 0/301 collisions each, independently validated in PyBullet.',
-    technologies: ['Python', 'PyTorch', 'PyBullet', 'URDF', 'Motion Planning'],
+    summary: 'Collision checking and motion repair for the Franka Panda, combining a 61-sphere PyTorch/URDF model with a C++17 analysis CLI.',
+    impact: '94.28% accuracy on a 20,000-pose holdout, with zero false-safe predictions across 2,479 collisions. Validated 69,400 C++ sphere-pair clearances across 100 configurations against a Python reference at 1e-10 m tolerance, with boundary and differential tests in CMake/CTest.',
+    technologies: ['C++17', 'Python', 'PyTorch', 'PyBullet', 'CMake / CTest'],
     links: [{ label: 'Repository', href: 'https://github.com/JayadityaVetsa/Robot-SphereShield' }],
   },
   {
@@ -126,7 +126,7 @@ export const research = [
 ];
 
 export const experience: Experience[] = [
-  { title: 'Undergraduate Research Assistant', organization: 'The University of Texas at Dallas · Prof. Vibhav Gogate', period: 'May 2026–present', summary: 'Developing and evaluating components for robot learning, motion tracking, and simulation workflows.', highlights: ['Evaluated 11,264 persistent surface points per video with Python, PyTorch, Point4D, and CAD-based kinematics.', 'Reduced held-out pose MAE from 19.99° to 2.01° across 793 frames from 12 unseen episodes.', 'Accelerated LeRobot v3 RGB conversion 76.9× to 2,383.7 frames/s while preserving identical output.'] },
+  { title: 'Undergraduate Research Assistant', organization: 'The University of Texas at Dallas · Prof. Vibhav Gogate', period: 'May 2026–present', summary: 'Developing and evaluating components for robot learning, motion tracking, and simulation workflows.', highlights: ['Evaluated 11,264 persistent surface points per video with Python, PyTorch, Point4D, and CAD-based kinematics.', 'Reduced held-out pose MAE from 19.99° to 2.01° across 793 frames from 12 unseen episodes.', 'Developing MimicScene for Franka Panda manipulation in Isaac Sim; integrated SE(3) alignment, inverse kinematics, collision checking, grasp optimization, and four imitation-learning policies.'] },
   { title: 'Machine Learning Intern', organization: 'Calimatic EdTech · Atlanta / Remote', period: 'Summers 2023–2025', summary: 'Built and deployed retrieval-augmented AI services and automation workflows for an education technology team.', highlights: ['Deployed a Python RAG service on Azure with 1,000+ successful executions.', 'Integrated LangChain, LlamaIndex, and Pinecone vector search.', 'Shipped 5+ n8n automations and improved efficiency by 70%.'] },
   { title: 'Global Finalist', organization: 'Young Investors Society', period: '2025', summary: 'Conducted institutional-style equity research and presented an investment thesis in New York.', highlights: ['Reached the Top 24 globally from 650+ teams.', 'Completed 100+ hours of Arista Networks research.', 'Built a 10-year DCF with bull, base, and bear cases.'] },
   { title: 'Co-Founder & Vice President', organization: 'RHS Science Olympiad', period: '2022–2026', summary: 'Helped grow and lead a competitive science team while managing its operations and fundraising.', highlights: ['Led a club of 150+ members.', 'Qualified for Texas State with the team.', 'Placed 6th in Cell Biology at UT Regionals.'] },
@@ -135,12 +135,12 @@ export const experience: Experience[] = [
 
 export const education = {
   school: 'The University of Texas at Austin',
-  detail: 'B.S. Computer Science · Expected May 2030',
-  academics: ['Robotics Honors Program', 'Minor in Robotics'],
-  coursework: ['Python', 'Java', 'TypeScript', 'C++', 'PyTorch', 'MuJoCo', 'Isaac Sim', 'OpenCV', 'FastAPI', 'Docker'],
+  detail: 'B.S. Computer Science · Expected May 2029',
+  academics: ['Robotics Honors Program', 'Minor in Robotics', 'GPA: 4.0 / 4.0'],
+  coursework: ['Python', 'C++17', 'ROS 2', 'Gazebo', 'PyTorch', 'Isaac Sim', 'MuJoCo', 'OpenCV', 'CMake / CTest', 'Docker'],
 };
 
 export const organizations = [
-  { name: 'Texas Aerial Robotics', role: 'Raytheon AVC Software Team', area: 'Autonomous flight', text: 'Software team member for the Raytheon Autonomous Vehicle Competition.' },
-  { name: 'Texas Humanoids', role: 'State Estimation & Perception Engineer', area: 'Humanoid robotics', text: 'Working in state estimation and perception with UT Austin’s humanoid robotics team.' },
+  { name: 'Texas Aerial Robotics', role: 'Raytheon AVC Software Team', area: 'Autonomous flight', period: 'September 2026–present', text: 'Evaluated 5-DOF arm tracking, clearance, and effort at 1 ms and 0.5 ms physics steps using Gazebo and ROS 2 simulation.' },
+  { name: 'Texas Humanoids', role: 'State Estimation & Perception Engineer', area: 'Humanoid robotics', period: 'September 2026–present', text: 'Preparing humanoid perception and state-estimation workflows by configuring OpenCV, ROS 2, and analysis tools.' },
 ];

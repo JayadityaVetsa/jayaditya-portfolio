@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { MotionConfig, motion, useReducedMotion, useScroll, useSpring, useTransform, type Variants } from 'framer-motion';
 import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Mail, Menu, X } from 'lucide-react';
+import { track } from '@vercel/analytics';
 import {
   education,
   experience,
@@ -89,7 +90,11 @@ function MotionStudy() {
 function ExternalLink({ link, className = '' }: { link: LinkItem; className?: string }) {
   const isMail = link.href.startsWith('mailto:');
   return (
-    <a className={className} href={link.href} {...(!isMail ? { target: '_blank', rel: 'noreferrer' } : {})}>
+    <a className={className} href={link.href} onClick={() => {
+      if (import.meta.env.PROD && import.meta.env.VITE_TRACK_CLICKS === 'true') {
+        track(link.href === profile.resumeUrl ? 'resume_open' : 'portfolio_link_click', { label: link.label });
+      }
+    }} {...(!isMail ? { target: '_blank', rel: 'noreferrer' } : {})}>
       {link.label}
       {!isMail && <ArrowUpRight size={15} aria-hidden="true" />}
     </a>
@@ -190,6 +195,7 @@ function App() {
           </motion.p>
           <motion.div className="hero-actions" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.24 }}>
             <button type="button" className="primary-action" onClick={() => scrollTo('work')}>Explore selected work <ArrowDownRight size={17} /></button>
+            <ExternalLink link={{ label: 'View resume', href: profile.resumeUrl }} className="text-action" />
             <ExternalLink link={{ label: 'Email me', href: `mailto:${profile.email}` }} className="text-action" />
           </motion.div>
           <div className="hero-affiliation">Computer Science <span>/</span> Robotics <span>/</span> Applied ML</div>
@@ -237,7 +243,7 @@ function App() {
 
         <Section id="campus" eyebrow="At UT Austin" title="Building alongside the team.">
           <Reveal><p className="section-intro">Bringing perception, software, and controls into student robotics at UT.</p></Reveal>
-          <div className="organization-grid">{organizations.map((org, index) => <Reveal key={org.name}><article className="organization-card"><div className="org-top"><span className="eyebrow">{org.area}</span><span className="org-number">0{index + 1}</span></div><h3>{org.name}</h3><p className="org-role">{org.role}</p><p>{org.text}</p><span className="org-school">The University of Texas at Austin</span></article></Reveal>)}</div>
+          <div className="organization-grid">{organizations.map((org, index) => <Reveal key={org.name}><article className="organization-card"><div className="org-top"><span className="eyebrow">{org.area}</span><span className="org-number">0{index + 1}</span></div><h3>{org.name}</h3><p className="org-role">{org.role}</p><p className="org-period">{org.period}</p><p>{org.text}</p><span className="org-school">The University of Texas at Austin</span></article></Reveal>)}</div>
         </Section>
 
         <Section id="about" eyebrow="About" title="Curiosity, backed by careful work.">

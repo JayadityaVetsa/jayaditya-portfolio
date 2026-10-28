@@ -184,6 +184,7 @@ footer div a:hover { color: #1f2933; }
 .organization-card h3 { font: 500 2.2rem Newsreader, Georgia, serif; letter-spacing: -.03em; margin: 40px 0 12px; line-height: 1.1; }
 .organization-card p { color: #637074; font-size: .92rem; line-height: 1.65; margin: 0 0 20px; }
 .organization-card .org-role { font-weight: 600; color: #37523f; margin-bottom: 10px; }
+.organization-card .org-period { font: .66rem 'DM Mono', monospace; color: #637460; margin-bottom: 18px; }
 .org-school { margin-top: auto; padding-top: 22px; border-top: 1px solid #d6d8cd; color: #778174; font: .62rem 'DM Mono', monospace; }
 .about-grid > div p { line-height: 1.4; }
 .about-grid .about-signature { margin-top: 35px; font: .8rem 'DM Sans', sans-serif; color: #914527; }
